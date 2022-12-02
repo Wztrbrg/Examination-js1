@@ -115,7 +115,7 @@ function createCards() {
   //Börja med att ta bort befintliga kort och resetta alla poäng så det börjar från början.
   deleteAllCards();
   gameState.history = ""; // Detta tar bort historiken för alla drag som gjorts
-  // symbols = randomizeSymbolArray(symbols); // Randomizar arrayen...
+  symbols = randomizeSymbolArray(symbols); // Randomizar arrayen...
   /* resettar score */
   gameState.playerOneScore = 0;
   gameState.playerTwoScore = 0;
