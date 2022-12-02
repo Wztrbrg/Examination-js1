@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="game">
+      <div class="start-menu">
+        <h1 class="start-msg">Välkommen till Ultimate Memory!</h1>
+        <button class="start-btn">Spela!</button>
+        <p class="start-txt">
+          Kör spelet i maximerat fönster för bästa upplevelse 😂
+        </p>
+      </div>
+      <div class="player-menu">
+        <h2 class="player-prompt">Lägg till spelare</h2>
+        <form class="player-form">
+          <label for="player1">Spelare 1</label>
+          <input type="text" name="player1" class="player1" />
+          <label for="player2">Spelare 2</label>
+          <input type="text" name="player2" class="player2" />
+          <button class="start-game-btn" type="button">Starta</button>
+          <button class="back-btn" type="button">Tillbaka</button>
+        </form>
+      </div>
+      <div class="game-display">
+        <div class="page-wrapper">
+          <div class="left-side">
+            <header><h1 class="player-turn-text">Spelare 1's tur</h1></header>
+
+            <div class="card-container">
+              <h1 class="winner-text">
+                <label class="player-name-label"></label
+                ><label class="result-label"> vann!</label>
+              </h1>
+              <!--Kort ligger här-->
+            </div>
+          </div>
+          <div class="points-container">
+            <div>
+              <h1 class="">Poäng</h1>
+              <h3>
+                <label class="player-one-name-label"></label
+                ><label class="player-one-score">0</label>
+              </h3>
+              <h3>
+                <label class="player-two-name-label"></label
+                ><label class="player-two-score">0</label>
+              </h3>
+            </div>
+            <div class="history-container">
+              <header>
+                <h2>Historik</h2>
+              </header>
+              <div class="line"></div>
+              <div class="history">
+                <!-- skriv ut historiken här -->
+              </div>
+            </div>
+            <div class="btn-container">
+              <button onclick="createCards();">Återställ poängen</button>
+              <button class="exit-btn" onclick="exit();">Avsluta spel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
